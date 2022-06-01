@@ -1,0 +1,70 @@
+.section__hero {
+  background-image: url("../../imagesNFT/Image.png");
+  min-height: 600px;
+  background-repeat: no-repeat;
+  background-position: 75%;
+  background-size: contain;
+  .hero__content {
+    width: 50%;
+    padding-top: 100px;
+    .hero__title {
+      @include allfont(
+        map-get($font-weight, bold),
+        43px,
+        64px,
+        map-get($colors, white)
+      );
+      margin-bottom: 10px;
+      .sub__title {
+        color: #fd1c68;
+      }
+    }
+    .hero__description {
+      @include allfont(
+        map-get($font-weight, normal),
+        20px,
+        30px,
+        map-get($colors, white)
+      );
+      margin-bottom: 20px;
+    }
+    .btn__create {
+      @extend .btn;
+      @include Btn(
+        map-get($colors, white),
+        20px 40px,
+        map-get($colors, bg-black)
+      );
+      border: 1px solid #ffffff;
+      margin-left: 20px;
+    }
+  }
+}
+.section__help {
+  text-align: center;
+  margin-bottom: convertPxToRem(100px);
+  .list__iconBox {
+    display: flex;
+    margin-top: 40px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    .item__iconBox {
+      width: calc(25% - 15px);
+      margin-right: 15px;
+      .item__icon {
+        display: inline-block;
+        padding: 18px;
+        border-radius: 100rem;
+        background: linear-gradient(207.67deg, #23D3A4 3.43%, #5B49CF 104.7%);
+        margin-bottom: 20px;
+      }
+      .title__box {
+        @include allfont(map-get($font-weight,bold),24px,32px,map-get($colors,white))
+      }
+      .description__box {
+        @include allfont(map-get($font-weight,normal),$font-size-lg,24px,map-get($colors,white))
+      }
+    }
+  }
+}

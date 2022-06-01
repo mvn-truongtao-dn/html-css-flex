@@ -1,0 +1,92 @@
+// body {
+//   padding: 20px;
+// }
+.cards {
+  display: flex;
+  margin-left: -30px;
+  .card {
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    width: calc(25% - 30px);
+    margin-left: 30px;
+    display: flex;  // khi test title bi tran
+    flex-direction: column; 
+  }
+}
+.card-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  .card-top {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    .card-image {
+      height: 200px;
+      width: 100%;
+      object-fit: cover;
+      flex-shrink: 0; //
+    }
+
+    .card-title {
+      font-weight: 500;
+      margin-bottom: 25px;
+      word-break: break-all;
+      display:-webkit-box;
+      -webkit-line-clamp:3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      word-break: break-word;
+    }
+  }
+}
+.card-user {
+  display: flex;
+  align-items: center;
+  margin-top: auto;
+  .card-user-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 100rem;
+    flex-shrink: 0;
+    object-fit: cover;
+  }
+  .card-user-info {
+    padding-left: 20px;
+    flex: 1;
+    .card-user-name {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+    .card-user-game {
+      color: #999;
+      font-weight: 13px;
+    }
+  }
+}
+.card-bottom {
+  padding: 25px;
+  border-top: 1px solid #eee;
+  display: flex;
+  flex-shrink: 0;
+  margin-top: auto;
+  align-items: center;
+  justify-content: space-between;
+  .card-live {
+    color: white;
+    padding: 5px 15px;
+    background-color: #FF6651;
+    border-radius: 10px;
+  }
+  .card-watching {
+    font-size: 13px;
+    color: #999;
+    font-weight: 300;
+  }
+}

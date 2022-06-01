@@ -1,0 +1,14 @@
+.page-headerNFT {
+  min-height: 100px;
+  color:map-get($map: $colors, $key: white);
+  .logo {
+    gap: 12px;
+  }
+  .item__menu {
+    display: inline-block;
+    width: 80px;
+    .link__item {
+      color: white;
+    }
+  }
+}

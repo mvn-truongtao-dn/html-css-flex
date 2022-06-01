@@ -1,0 +1,53 @@
+// .btn {
+//   @include pxRem(padding, 8 16);
+//   // @include pxRem(border-radius, 8);
+//   @include pxRem(font-size, 18);
+//   @include pxRem(height, 40);
+//   background: map-get($colors, primary);
+//   color: map-get($colors, white);
+//   line-height: 1;
+//   cursor: pointer;
+//   transition: background 400ms ease;
+//   border: 0;
+//   display: inline-flex;
+//   align-items: center;
+//   justify-content: center;
+//   &:hover {
+//     background: map-get($colors, primary-dark);
+//   }
+//   &:focus {
+//     outline: none;
+//   }
+//   &.disabled,
+//   &:disabled {
+//     pointer-events: none;
+//     color: map-get($colors, txt-disabled);
+//     border-color: map-get($colors, txt-disabled);
+//     background: map-get($colors, bg-gray-light);
+//   }
+// }
+.btn-cart {
+  background: #eb8e78;
+  border: none;
+  border-radius: 24px;
+  padding: 12px;
+}
+.btn-search {
+  padding: 1.45rem 2rem;
+  background: #eb8e78;
+  border-radius: 12px;
+}
+.btn {
+  border-radius: 12px;
+  font-weight: map-get($map: $font-weight, $key: medium);
+  border: none;
+  cursor: pointer;
+}
+.btn__NFT {
+  @extend .btn;
+  @include Btn(
+    map-get($colors, white),
+    20px 40px,
+    linear-gradient(207.67deg, #fdae8f 3.43%, #fd1c68 104.7%)
+  );
+}

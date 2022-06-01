@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
-
+import logo from "./logo.svg";
+import Header from "./components/layouts/Header";
+import "./assets/scss/styles.scss";
+import Home from "./page/Home";
+import Header2 from "./components/layouts/Header2";
+import Products from "./page/Product";
+import Home2 from "./page/Home2";
+import HeaderNFT from "./components/layouts/HeaderNFT";
+import Home3 from "./page/Home3";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {/* <Header2></Header2> */}
+      {/* <Home /> */}
+      {/* <Products></Products> */}
+      <HeaderNFT></HeaderNFT>
+      <Home3></Home3>
+    </>
   );
 }
 

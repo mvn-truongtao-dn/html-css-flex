@@ -1,0 +1,268 @@
+.page-header {
+  background-color: #5eae53;
+  height: 880px;
+  min-height: 930px;
+  width: 100%;
+
+  .item-menu {
+    display: inline-block;
+    padding: 10px 20px;
+    font-family: "DM Sans";
+    font-size: $font-size-lg;
+    font-weight: map-get($map: $font-weight, $key: normal);
+    .link-menu {
+      color: map-get($map: $colors, $key: white);
+    }
+  }
+  .logo {
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 48px;
+  }
+  .btn-login {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    padding: 10px 20px;
+    color: map-get($map: $colors, $key: white);
+    background-color: #5eae53;
+    font-family: "DM Sans";
+    font-size: $font-size-lg;
+    margin-right: 10px;
+  }
+}
+.btn-menu-respond {
+  display: none;
+}
+.block-feature {
+  margin-top: 50px;
+  height: 650px;
+  position: relative;
+  width: calc(100%);
+  .content-feature {
+    width: 45%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    .title-feature {
+      font-size: 50px;
+      font-weight: map-get($map: $font-weight, $key: normal);
+      line-height: 63px;
+      color: #f6b76c;
+    }
+    .content {
+      font-weight: map-get($map: $font-weight, $key: bold);
+      color: map-get($map: $colors, $key: white);
+      font-size: 72px;
+      line-height: 80px;
+      margin-bottom: 20px;
+    }
+  }
+
+  @include respond-below(wide) {
+    .content-feature {
+      width: 100%;
+      padding: 0 10px;
+      text-align: center;
+    }
+  }
+  .food1 {
+    position: absolute;
+    top: 14%;
+    right: 8%;
+    z-index: 2;
+  }
+  .food2 {
+    position: absolute;
+    bottom: 0;
+    right: 30%;
+    z-index: 1;
+  }
+  .food3 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 3;
+  }
+
+  .form-input-favorite {
+    position: relative;
+    input[type="text"] {
+      width: 100%;
+      height: 48px;
+    }
+    .btn-search {
+      position: absolute;
+      top: 1px;
+      right: 0px;
+    }
+  }
+}
+@include respond-below(wide) {
+  .list-item-menu {
+    display: none;
+  }
+  .page-header {
+    .btn-login {
+      display: none;
+    }
+  }
+  .btn-menu-respond {
+    display: block;
+  }
+  .btn-cart {
+    display: none;
+  }
+}
+// input:focus,
+// select:focus,
+// textarea:focus,
+// button:focus {
+//     outline: none;
+// }
+// .icon {
+//   font-size: $font-size-lg;
+// }
+// .page-header {
+//   // @include pxRem(padding, 10);
+//   // text-align: center;
+//   .page-header-top {
+//     background: map-get($colors, bg-black);
+//     color: #99a0a1;
+//     @include pxRem(padding, 10);
+//   }
+//   .page-header-footer {
+//     background: map-get($colors, bg-gray);
+//     border-bottom: 1px solid rgba(#99a0a1, 0.5);
+//     .block-operation {
+//       position: relative;
+//       display: inline-block;
+//       padding: 14px 35px;
+//       &:nth-child(odd) {
+//         border-left: 1px solid rgba(#99a0a1, 0.5);
+//         border-right: 1px solid rgba(#99a0a1, 0.5);
+//       }
+//       .quantily {
+//         position: absolute;
+//         top: 8px;
+//         left: 45px;
+//         border-radius: 50%;
+//         height: 14px;
+//         width: 14px;
+//         text-align: center;
+//         color: map-get($map: $colors, $key: white);
+//         background-color: #3a734e;
+//       }
+//       .content-operation {
+//         display: inline-block;
+//         padding: 0 10px;
+//       }
+//     }
+//   }
+//   .item-header {
+//     display: inline-block;
+//     @include pxRem(padding, 5 20);
+//   }
+//   .list-support {
+//     display: flex;
+//     .item-support {
+//       padding: 10px;
+//       .link-item-support {
+//         color: #99a0a1;
+//       }
+//     }
+//   }
+//   .block-select-country {
+//     position: relative;
+//     width: 100px;
+//     background: map-get($colors, bg-black);
+//     .select-country {
+//       background: map-get($colors, bg-black);
+//       border-color: map-get($colors, txt-black);
+//       box-shadow: none;
+//       color: map-get($map: $colors, $key: white);
+//       border: none;
+//     }
+//     .icon-downoutlined {
+//       position: absolute;
+//       top: 17px;
+//       right: 0;
+//     }
+//   }
+// }
+// .block-form-search {
+//   position: relative;
+//   .form-search {
+//     .icon-search {
+//       position: absolute;
+//       left: 15px;
+//       font-size: $font-size-lg;
+//       top: 15px;
+//     }
+//     .icon-filter {
+//       position: absolute;
+//       top: 15px;
+//       font-size: $font-size-lg;
+//       right: 20px;
+//     }
+//     input {
+//       border: none;
+//       width: 100%;
+//       height: 50px;
+//       padding-left: 40px;
+//     }
+//   }
+// }
+
+// .button-menu-small {
+//   display: none;
+// }
+
+// // @include respond-above(large) {
+// //   .active-menu-small {
+// //     display: none;
+// //   }
+// // }
+
+// @include respond-below(large) {
+//   .page-header-top {
+//     position: relative;
+//   }
+//   .button-menu-small {
+//     display: block;
+//   }
+//   .block-menu {
+//     display: none;
+//   }
+// }
+// .active-menu-small {
+//   position: absolute;
+//   display: flex;
+//   flex-direction: column;
+//   top: 34px;
+//   right: 0;
+//   width: 100%;
+//   background: map-get($colors, bg-black);
+//   .list-support {
+//     flex-direction: column;
+//     text-align: center;
+//   }
+//   .item-header {
+//     @include pxRem(padding, 10);
+//   }
+//   .block-select-country {
+//     .select-country:focus {
+//       border-color: map-get($colors, txt-black);
+//       box-shadow: none;
+//     }
+//     .icon-downoutlined {
+//       top: 22px;
+//       right: 12px;
+//     }
+//   }
+// }
+// @include respond-above(large) {
+//   .active-menu-small {
+//     display: none;
+//   }
+// }
